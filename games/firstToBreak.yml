@@ -1,0 +1,37 @@
+# Is Chat Game enabled?
+enabled: true
+
+# How long should the game last?
+length: 60
+
+# Game start routine. This is where you can configure the game start message and requirements.
+gameStart:
+  effects:
+    - 'SET_VARIABLE:blocktobreak:<random word>COAL_ORE,IRON_ORE,GOLD_ORE,DIAMOND_ORE,EMERALD_ORE,LAPIS_ORE,REDSTONE_ORE,NETHER_QUARTZ_ORE,
+    NETHER_GOLD_ORE,COPPER_ORE,DEEPSLATE_COAL_ORE,DEEPSLATE_IRON_ORE,DEEPSLATE_GOLD_ORE,DEEPSLATE_DIAMOND_ORE,DEEPSLATE_EMERALD_ORE,
+    DEEPSLATE_LAPIS_ORE,DEEPSLATE_REDSTONE_ORE,DEEPSLATE_COPPER_ORE</random word>' # This is where you customise the random blocks
+    - "BROADCAST: "
+    - "BROADCAST:                                   &d&lQUICK GAME"
+    - "BROADCAST: &fThe first person break the &d<nice format>%custom_blocktobreak%</nice format> &fin &d60s&f block wins the game!"
+    - "BROADCAST: "
+
+# Game end routine when someone wins. This is where you can configure the game end message and rewards.
+gameEndWinner:
+  type: MINING # Find more types here: https://wiki.advancedplugins.net/abilities/triggers
+  conditions:
+    - "%block type% = %custom_blocktobreak% : %allow%"
+  effects:
+    - "BROADCAST: "
+    - "BROADCAST:                                &d&lCHAT GAME"
+    - "BROADCAST: &fThe game has ended! &e%player name% &fwas the first to break the &e<nice format>%custom_blocktobreak%</nice format>&f block!"
+    - "BROADCAST: "
+    - "CONSOLE_COMMAND:eco give %player name% 250"
+
+# Game end routine when time runs out. This is where you can configure the game end message and rewards.
+gameEndNoWinner:
+  effects:
+    - "BROADCAST: "
+    - "BROADCAST:                          &d&lCHAT GAME"
+    - "BROADCAST:  &dNo one &fwas able to find and break a &d<nice format>%custom_blocktobreak%</nice format>&f block in time!"
+    - "BROADCAST:       &fThe game has ended! Better luck next time."
+    - "BROADCAST: "

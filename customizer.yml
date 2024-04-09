@@ -1,0 +1,20 @@
+# Chat Messages Customizer
+# REQUIRES PROTOCOLLIB TO WORK!
+# How to use: https://chat.advancedplugins.com/customizer
+
+enabled: true
+
+# Replace, update or just modify all existing chat messages from server or plugins!
+# These messages have full support of gradients, placeholderapi and more.
+
+# findType is the way to compare and find the message to replace.
+# Possibilities are: EQUALS, STARTS_WITH, ENDS_WITH, CONTAINS, REGEX
+
+# E.g. customise the default "unknown command" message. You can fully create your own customizations!
+unknownCommand:
+  findType: EQUALS # This means `fromMessage` must be exactly the same as the message to replace
+  find: '&fUnknown command. Type "/help" for help.'
+  replace:
+    0: # You can replace multiple parts of the message, this way keeping original message's variables, e.g. special variables. PlaceholderAPI is still supported here!
+      from: '&fUnknown command. Type "/help" for help.'
+      to: '&cYou''ve typed an unknown command! Type "/help" for help or use "/discord" to join our Discord server!'

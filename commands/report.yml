@@ -1,0 +1,25 @@
+# These commands are fully customisable, you can delete them, create new ones
+
+# Argument variables
+# - %arg-N-N% (example %arg-1-4%)
+# - %arg-N-END% (example %arg-2-END%)
+# - %command% (base command name)
+# - %label% (command used supporting aliases)
+
+# You can disable commands by changing the file extension.
+# For example change "time.yml" to "time.yml.off"
+
+baseCommand: /report
+description: Report player
+
+# Put unlimited conditions and effects
+command:
+  - effects:
+      - "MESSAGE:&cCommand usage: /report <player> <reason>! <condition>%arg length% < 2 : %allow%</condition>"
+      - "BROADCAST_PERMISSION:advancedchat.admin:&c[Report] %player name% &fhas reported &c%arg-1% &ffor &c%arg-2-END% <condition>%arg length% >= 2 : %allow%</condition>"
+      - "MESSAGE:&fYour report has been submitted! Thank you for helping us keep the server clean! <condition>%arg length% >= 2 : %allow%</condition>"
+
+# Put unlimited conditions and effects
+invalidArgs:
+  - effects:
+      - "MESSAGE:&cCommand usage: /report <player> <reason>!"

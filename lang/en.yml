@@ -1,0 +1,149 @@
+prefix: "<aqua>AdvancedChat</aqua> "
+
+messages:
+  recipientOffline: "%prefix%<red>Player isn't online!</red>"
+  reload: "%prefix%<green>Plugin has been reloaded!</green>"
+  noPermission: "%prefix%<red>You don't have permission to use this!</red>"
+  playerCommandOnly: "%prefix%<red>Console cannot use this command!</red>"
+  chatColor:
+    colorSet: "%prefix%<green>You have set your chat color to %color_name%</green>"
+    colorRemove: "%prefix%<green>You have removed your chat color</green>"
+  chatTags:
+    tagSet: "%prefix%<green>You have set your chat tag to %tag%"
+    tagRemove: "%prefix%<green>You have removed your chat tag</green>"
+  clear:
+    onClear: "<green>The chat has been cleared by %player_name%</green>"
+  msg:
+    yourself: "%prefix%<red>You can't send a message to yourself!</red>"
+    targetOffline: "%prefix%<red>Player isn't online!</red>"
+    outgoing: "<red>You </red><dark_gray>>> </dark_gray><red>%player_name%</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+    incoming: "<red>%sender_name% </red><dark_gray>>> </dark_gray><red>You</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+  reply:
+    noReply: "%prefix%<red>No user to reply to!</red>"
+  ignore:
+    yourself: "%prefix%<red>You can't ignore yourself!</red>"
+    on: "%prefix%<green>You have ignored %player_name%</green>"
+    off: "%prefix%<red>You have un-ignored %player_name%</red>"
+    onRecipient: "%prefix%<green>You have ignored %player_name% for %recipient_name%</green>"
+    offRecipient: "%prefix%<red>You have un-ignored %player_name% for %recipient_name%</red>"
+    onAll: "%prefix%<green>You have ignored everyone"
+    offAll: "%prefix%<green>You have un-ignored everyone"
+    onAllRecipient: "%prefix%<green>You have ignored everyone for %recipient_name%"
+    offAllRecipient: "%prefix%<green>You have un-ignored everyone for %recipient_name%"
+    notIgnored: "%prefix%<red>%player_name% is not ignored!</red>"
+    notIgnoredRecipient: "%prefix%<red>%recipient_name% does not have %player_name% ignored!</red>"
+    notIgnoredAll: "%prefix%<red>You don't have all players ignored!</red>"
+    notIgnoredAllRecipient: "%prefix%<red>%recipient_name% does not have all players ignored!</red>"
+    ignorelist:
+      listFormat:
+        - 'All players ignored: %ignored_all%'
+        - '<green>Ignored Players list:'
+        - '%player_list%'
+      playerFormat:
+        - '<gray>- </gray><white>%player_name%'
+  spy:
+    yourself: "%prefix%<red>You can't spy on yourself!</red>"
+    on: "%prefix%<green>You are now spying on all PMs from %player_name%</green>"
+    off: "%prefix%<green>You've stopped spying on all PMs from %player_name%</green>"
+    onRecipient: "%prefix%<green>%recipient_name% is now spying on %player_name%</green>"
+    offRecipient: "%prefix%<red>%recipient_name% stopped spying on %player_name%</red>"
+    onAll: "%prefix%<green>You are spying on all PMs from now on</green>"
+    offAll: "%prefix%<red>You've stopped from spying on all PMs</red>"
+    onAllRecipient: "%prefix%<green>%recipient_name% is spying on all PMs from now on</green>"
+    offAllRecipient: "%prefix%<red>%recipient_name% has stopped from spying on all PMs</red>"
+    notSpying: "%prefix%<red>You are not spying on %player_name%!</red>"
+    notSpyingRecipient: "%prefix%<red>%recipient_name% is not spying on %player_name%!</red>"
+    notSpyingAll: "%prefix%<red>You are not spying on all PMs!</red>"
+    notSpyingAllRecipient: "%prefix%<red>%recipient_name% is not spying on all PMs!</red>"
+    incoming: "<yellow>SPY: <red>%sender_name% </red><dark_gray>>> </dark_gray><red>%player_name%</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+    spylist:
+      listFormat:
+        - 'All players spied: %spy_all%'
+        - '<green>Spied Players list:'
+        - '%player_list%'
+      playerFormat:
+        - '<gray>- </gray><white>%player_name%'
+  channel:
+    invalid: "%prefix%<red>%channel_name% doesn't exist</red>"
+    noPermissionJoin: "%prefix%<red>You don't have permission to join this channel!</red>"
+    noPermissionLeave: "%prefix%<red>You don't have permission to leave this channel!</red>"
+    alreadyJoined: "%prefix%<red>You are already in this channel!</red>"
+    alreadyJoinedRecipient: "%prefix%<red>Target is already in this channel!</red>"
+    join: "%prefix%<green>You have joined %channel_name% channel!</green>"
+    joinRecipient: "%prefix%<green>You've made %recipient_name% joined %channel_name% channel!</green>"
+    leave: "%prefix%<green>You have left %channel_name% channel!</green>"
+    leaveRecipient: "%prefix%<green>You've made %recipient_name% leave %channel_name% channel!</green>"
+    noChannel: "%prefix%<red>You are not in any channel!</red>"
+    noChannelRecipient: "%prefix%<red>Target is not in any channel!</red>"
+  channels:
+    listFormat:
+      - '<green>Available channels list:'
+      - '%channel_list%'
+    channelFormat:
+      - '<gray>- </gray><white>%channel_name%'
+  warn:
+    messageUser: "<red>You have been warned for: %reason%</red>"
+    messageStaff: "<red><bold>[Warnings] </bold><red>%player% has been warned for: %reason%</red>"
+  alert:
+    messageStaff: "<red><bold>[Alert] </bold><red>%reason%</red>"
+  channelSpy:
+    on: "%prefix%<green>You are spying on messages from %channel_name% channel</green>"
+    off: "%prefix%<red>You've stopped from spying on messages from %channel_name% channel</red>"
+    onRecipient: "%prefix%<green>%recipient_name% is now spying on messages from %channel_name% channel</green>"
+    offRecipient: "%prefix%<green>%recipient_name% has stopped spying on messages from %channel_name% channel</green>"
+    onAll: "%prefix%<green>You are spying on all channels from now on</green>"
+    offAll: "%prefix%<red>You've stopped from spying on all channels</red>"
+    onAllRecipient: "%prefix%<green>%recipient_name% is spying on all channels from now on</green>"
+    offAllRecipient: "%prefix%<red>%recipient_name% has stopped from spying on all channels</red>"
+    notSpying: "%prefix%<red>You are not spying on all %channel_name% channel!</red>"
+    notSpyingRecipient: "%prefix%<red>%recipient_name% is not spying on all %channel_name% channel!</red>"
+    notSpyingAll: "%prefix%<red>You are not spying on all channels!</red>"
+    notSpyingAllRecipient: "%prefix%<red>%recipient_name% is not spying on all channels!</red>"
+    incoming: "<yellow>CHANNEL SPY <green>[%channel_name%]</green>: <red>%sender_name% </red><dark_gray>>> </dark_gray><gray>%message%</gray>"
+    spylist:
+      listFormat:
+        - 'All channels spied: %spy_all%'
+        - '<green>Spied Channels list:'
+        - '%channel_list%'
+      channelFormat:
+        - '<gray>- </gray><white>%channel_name%'
+
+commands:
+  info:
+    - "<gray>Chat Color:</gray> <yellow>%advancedchat_color%"
+    - "<gray>Chat Format:</gray> <yellow>%advancedchat_format%"
+    - "<gray>Channel:</gray> <yellow>%advancedchat_channel%"
+    - "<gray>Allowed Channels:</gray> <yellow>%advancedchat_channels%"
+    - "<gray>Tag:</gray> <yellow>%advancedchat_tag%"
+    - "<gray>Ignored Players:</gray> <yellow>%advancedchat_ignored_list%"
+    - "<gray>Ignored All:</gray> <yellow>%advancedchat_ignored_all%"
+    - ""
+    - "<gray>Use Colors:</gray> <yellow>%advancedchat_use_colors%"
+    - "<gray>Use Magic:</gray> <yellow>%advancedchat_use_magic%"
+    - "<gray>Use /msg:</gray> <yellow>%advancedchat_command_msg%"
+    - "<gray>Use /ignore:</gray> <yellow>%advancedchat_command_ignore%"
+    - "<gray>Use /unignore:</gray> <yellow>%advancedchat_command_unignore%"
+    - "<gray>Use /reply:</gray> <yellow>%advancedchat_command_reply%"
+    - "<gray>Use /channels:</gray> <yellow>%advancedchat_command_channels%"
+    - "<gray>Bypass IgnoreAll:</gray> <yellow>%advancedchat_bypass_ignore_all%"
+    - "<gray>Use Mention:</gray> <yellow>%advancedchat_use_mention%"
+    - "<gray>Can be Mentioned:</gray> <yellow>%advancedchat_allow_mentioned%"
+  commands:
+    listFormat:
+      - "<yellow>Custom Commands:</yellow>"
+      - "%command_list%"
+    commandFormat:
+      - "<red>%command_name%</red> <gray>-</gray> <gold>%command_desc%</gold>"
+
+chatMotd: # Leave empty to disable
+  - " "
+  - " "
+  - " "
+  - "               <gold>Welcome <white>%player_name%</white> to <white><bold>Our Server</bold></white></gold>"
+  - "   <yellow>Thank you for joining us! Your adventure awaits...</yellow>"
+  - ""
+  - "          <gold><bold>| VISIT OUR STORE</bold>: <white>/buy</white></gold>"
+  - "          <aqua><bold>| JOIN OUR DISCORD</bold>: <white>/discord</white></aqua>"
+  - " <gray><i>Stay updated with latest news and connect with community!</i></gray>"
+  - " "
+

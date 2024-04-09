@@ -1,0 +1,24 @@
+# These commands are fully customisable, you can delete them, create new ones
+
+# Argument variables
+# - %arg-N-N% (example %arg-1-4%)
+# - %arg-N-END% (example %arg-2-END%)
+# - %command% (base command name)
+# - %label% (command used supporting aliases)
+
+# You can disable commands by changing the file extension.
+# For example change "time.yml" to "time.yml.off"
+
+baseCommand: /sendmessage
+description: Send a message to player directly
+permission: advancedchat.sendmessage
+
+# Put unlimited conditions and effects
+command:
+  - effects:
+      - "MESSAGE:&f%arg-2-END% @PlayerFromName{target=%arg-1%}"
+
+# Put unlimited conditions and effects
+invalidArgs:
+  - effects:
+      - "MESSAGE:&cCommand usage: /sendmessage <player> <message>!"

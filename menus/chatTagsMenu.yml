@@ -1,0 +1,82 @@
+name: "&6Chat Tags"
+size: 36
+
+items:
+  filler:
+    type: BLACK_STAINED_GLASS_PANE
+    name: ' '
+  31:
+    type: PAPER
+    name: '&cReset your chat tag.'
+    action: RESET_TAG
+
+settings:
+  # Slots in which colors can be displayed
+  tagSlots: 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+  tagItem:
+    name: "%tag% <white>Chat Tag"
+    lore:
+      - '<gray>Click here to enable this chat tag.'
+  noPermissionItem:
+    name: "%tag% <white>Chat Tag"
+    lore:
+      - '<red>You do not have permission to use this chat tag.'
+      - '<gray>You can purchase this chat tag at <aqua>our store!'
+
+  tags: # Permissions are: advancedchat.tag.<tag> e.g. advancedchat.tag.mvp
+    mvp:
+      format: "<dark_purple>[MVP]</dark_purple>"
+      material: DIAMOND
+    vip:
+      format: "<green>[VIP]</green>"
+      material: EMERALD
+    hero:
+      format: "<red>[HERO]</red>"
+      material: NETHERITE_INGOT
+    legend:
+      format: "<gold>[LEGEND]</gold>"
+      material: GOLD_INGOT
+    elite:
+      format: "<dark_aqua>[ELITE]</dark_aqua>"
+      material: IRON_INGOT
+    pro:
+      format: "<blue>[PRO]</blue>"
+      material: OBSIDIAN
+    wizard:
+      format: "<light_purple>[WIZARD]</light_purple>"
+      material: ENCHANTED_BOOK
+    ninja:
+      format: "<dark_gray>[NINJA]</dark_gray>"
+      material: ENDER_PEARL
+    king:
+      format: "<yellow>[KING]</yellow>"
+      material: GOLDEN_APPLE
+    queen:
+      format: "<dark_purple>[QUEEN]</dark_purple>"
+      material: DRAGON_EGG
+    knight:
+      format: "<gray>[KNIGHT]</gray>"
+      material: IRON_SWORD
+    explorer:
+      format: "<dark_green>[EXPLORER]</dark_green>"
+      material: COMPASS
+    sage:
+      format: "<green>[SAGE]</green>"
+      material: BOOKSHELF
+    archer:
+      format: "<gold>[ARCHER]</gold>"
+      material: BOW
+    pirate:
+      format: "<dark_red>[PIRATE]</dark_red>"
+      material: TRIDENT
+    artisan:
+      format: "<dark_blue>[ARTISAN]</dark_blue>"
+      material: PAINTING
+    alchemist:
+      format: "<rainbow>[ALCHEMIST]</rainbow>"
+      material: BREWING_STAND
+    wanderer:
+      format: "<gray>[WANDERER]</gray>"
+      material: LEATHER_BOOTS
+
+

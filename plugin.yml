@@ -1,0 +1,242 @@
+name: AdvancedChat
+main: net.advancedplugins.chat.Core
+version: @version@
+api-version: 1.17
+
+# Load before these plugins for tab completion
+loadbefore:
+  - Essentials
+  - EssentialsX
+  - CMI
+
+libraries:
+  - org.openjdk.nashorn:nashorn-core:15.3
+softdepend:
+  - PlaceholderAPI
+  - ProtocolLib
+commands:
+  advancedchat:
+    permission: advancedchat.use
+    description: Main command for AdvancedChat
+    aliases:
+      - achat
+      - chat
+      - achats
+      - ac
+      - adc
+  alert:
+    permission: advancedchat.alert
+    description: Sends an alert message to all staff members
+  channel:
+    description: Change your chat channel
+    aliases:
+      - ch
+  channels:
+    permission: advancedchat.channels
+    description: List all available channels
+    aliases:
+      - chs
+  channelspy:
+    permission: advancedchat.command.channel.spy
+    description: Spy on messages from a specific channel
+    aliases:
+      - chspy
+  channelunspy:
+    permission: advancedchat.command.channel.unspy
+    description: Stop spying on messages from a specific channel
+    aliases:
+      - chunspy
+  msg:
+    permission: advancedchat.command.msg
+    description: Send a private message to a player
+    aliases:
+      - amsg
+      - m
+      - tell
+      - whisper
+      - w
+      - t
+      - pm
+      - message
+  reply:
+    permission: advancedchat.command.reply
+    description: Reply to the last private message
+    aliases:
+      - r
+  spy:
+    permission: advancedchat.command.spy
+    description: Spy on private messages
+    aliases:
+      - msgspy
+      - aspy
+  unspy:
+    permission: advancedchat.command.unspy
+    description: Stop spying on private messages
+    aliases:
+      - msgunspy
+      - aunspy
+  ignore:
+    permission: advancedchat.command.ignore
+    description: Ignore player's messages
+    aliases:
+      - aignore
+  unignore:
+    permission: advancedchat.command.unignore
+    description: Stop ignoring player's messages
+    aliases:
+      - aunignore
+  chatcolor:
+    permission: advancedchat.command.chatcolor
+    description: Change your chat color
+    aliases:
+      - color
+      - colors
+      - chatcolors
+      - chatcolor
+  tags:
+    permission: advancedchat.command.tags
+    description: Change your chat tag
+    aliases:
+      - tag
+      - tags
+      - chattags
+      - chattag
+  warn:
+    permission: advancedchat.command.warn
+    description: Warn a player
+    aliases:
+      - awarn
+permissions:
+  advancedchat.chat.talk:
+    description: Allows players to talk in chat.
+    default: true
+  advancedchat.chat.mention.allow:
+    description: Allows players to be mentioned in chat.
+    default: true
+  advancedchat.chat.mention.use:
+    description: Allows players to use mentions in chat.
+    default: true
+  advancedchat.chat.colors:
+    description: Grants access to use colored text in chat messages.
+    default: op
+  advancedchat.chat.magic:
+    description: Grants access to use 'magic' formatting (obfuscated text) in chat.
+    default: op
+  advancedchat.use:
+    description: General permission for using AdvancedChat features.
+    default: op
+  advancedchat.alert:
+    description: Allows sending alerts through AdvancedChat.
+    default: op
+  advancedchat.channels:
+    description: Grants access to chat channels features.
+    default: op
+  advancedchat.command.channel.spy:
+    description: Allows spying on chat channels.
+    default: op
+  advancedchat.command.channel.spy.all:
+    description: Permits spying on all chat channels.
+    default: op
+  advancedchat.command.channel.spy.channel:
+    description: Allows spying on a specific chat channel.
+    default: op
+  advancedchat.command.channel.spy.list:
+    description: Allows listing all spied chat channels.
+    default: op
+  advancedchat.command.channel.unspy:
+    description: Permits stopping spying on chat channels.
+    default: op
+  advancedchat.command.channel.unspy.all:
+    description: Allows stopping spying on all chat channels.
+    default: op
+  advancedchat.command.channel.unspy.channel:
+    description: Permits stopping spying on a specific chat channel.
+    default: op
+  advancedchat.command.msg:
+    description: Allows sending private messages to players.
+    default: true
+  advancedchat.command.reply:
+    description: Enables players to reply to the last private message.
+    default: true
+  advancedchat.command.spy:
+    description: Grants the ability to spy on private messages.
+    default: op
+  advancedchat.command.spy.all:
+    description: Allows spying on all private messages.
+    default: op
+  advancedchat.command.spy.list:
+    description: Enables listing all spied conversations.
+    default: op
+  advancedchat.command.spy.player:
+    description: Permits spying on private messages of a specific player.
+    default: op
+  advancedchat.command.unspy:
+    description: Allows stopping the spying on private messages.
+    default: op
+  advancedchat.command.unspy.all:
+    description: Permits stopping spying on all private messages.
+    default: op
+  advancedchat.command.unspy.player:
+    description: Allows stopping spying on a specific player's private messages.
+    default: op
+  advancedchat.command.ignore:
+    description: Enables players to ignore messages from other players.
+    default: true
+  advancedchat.command.ignore.list:
+    description: Allows players to list all ignored players.
+    default: true
+  advancedchat.command.ignore.all:
+    description: Grants permission to ignore messages from all players.
+    default: op
+  advancedchat.admin.command.ignore.all:
+    description: Admin permission to ignore all players.
+    default: op
+  advancedchat.command.ignore.player:
+    description: Allows ignoring messages from a specific player.
+    default: true
+  advancedchat.admin.command.ignore.player:
+    description: Admin permission to ignore a specific player.
+    default: op
+  advancedchat.command.unignore:
+    description: Permits players to stop ignoring messages from players.
+    default: true
+  advancedchat.command.unignore.all:
+    description: Allows players to stop ignoring all players.
+    default: true
+  advancedchat.admin.command.unignore.all:
+    description: Admin permission to stop ignoring all players.
+    default: op
+  advancedchat.command.unignore.player:
+    description: Permits stopping ignoring messages from a specific player.
+    default: true
+  advancedchat.admin.command.unignore.player:
+    description: Admin permission to stop ignoring a specific player.
+    default: op
+  advancedchat.command.chatcolor:
+    description: Allows players to change their chat color.
+    default: true
+  advancedchat.command.tags:
+    description: Grants access to chat tags features.
+    default: true
+  advancedchat.command.warn:
+    description: Permits warning players for chat violations.
+    default: op
+  advancedchat.command.warn.notify:
+    description: Notifies staff members of issued warnings.
+    default: op
+  advancedchat.command.announce:
+    description: Allows making server-wide announcements.
+    default: op
+  advancedchat.command.clear:
+    description: Grants the ability to clear the chat.
+    default: op
+  advancedchat.command.commands:
+    description: Provides access to AdvancedChat's command list.
+    default: op
+  advancedchat.command.info:
+    description: Permits viewing AdvancedChat plugin information.
+    default: op
+  advancedchat.command.reload:
+    description: Allows reloading the AdvancedChat configuration without restarting the server.
+    default: op
+

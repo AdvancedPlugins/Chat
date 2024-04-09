@@ -1,0 +1,34 @@
+# Here you can configure chat formatting
+# Assign format with advancedchat.format.<formatName>
+priority: 100
+prefix:
+  text: '<dark_red>[Owner]</dark_red>'
+  hover:
+    - '<#cc0033>%player_name%<red> Information:</red>'
+    - '<#cc0033> •<red> Balance: <white>%vault_eco_balance%</white>'
+    - '<#cc0033> •<red> Health: <white>%player_health%/%player_max_health% ❤</white></red>'
+    - '<#cc0033> •<red> Level: <white>%player_level%</white></red>'
+    - '<#cc0033> •<red> Playtime: <white>%statistic_hours_played% Hours</white></red>'
+  # https://jd.advntr.dev/api/4.14.0/net/kyori/adventure/text/event/ClickEvent.Action.html
+  click: 'SUGGEST_COMMAND:/msg %player_name% '
+name:
+  text: " <#cc0033><b>%player_name%<reset>"
+  hover:
+    - '<#cc0033>%player_name%<red> Information:</red>'
+    - '<#cc0033> •<red> Balance: <white>%vault_eco_balance%</white>'
+    - '<#cc0033> •<red> Health: <white>%player_health%/%player_max_health% ❤</white></red>'
+    - '<#cc0033> •<red> Level: <white>%player_level%</white></red>'
+    - '<#cc0033> •<red> Playtime: <white>%statistic_hours_played% Hours</white></red>'
+  click: 'SUGGEST_COMMAND:/msg %player_name% '
+suffix:
+  text: '%advancedchat_tag%: '
+  hover:
+    - ''
+  click: ''
+chat:
+  text: '<red>%message%'
+  hover: []
+  click: ''
+# Customisable range. If set to 0, range will be disabled.
+# Channel range overrides this range and takes a higher priority.
+range: 0.0

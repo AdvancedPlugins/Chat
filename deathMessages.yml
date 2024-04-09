@@ -1,0 +1,88 @@
+# Configurable death messages
+
+# Is it enabled?
+enabled: true
+
+# Are death messages enabled? (If false, all death messages will be disabled)
+deathMessagesEnabled: true
+
+# Are non-PVP death messages enabled?
+nonPvPDeathMessagesEnabled: true
+
+# You can delete the message to revert it to default
+deathMessages:
+  # General message for unspecified deaths
+  default: "<red>%name% died under mysterious circumstances."
+
+  # Messages for death by various entities
+  entity:
+    creeper: "<red>%name% was blown up by a Creeper."
+    skeleton: "<red>%name% was shot by a Skeleton."
+    spider: "<red>%name% was slain by a Spider."
+    zombie: "<red>%name% joined the undead."
+    enderman: "<red>%name% looked into the eyes of an Enderman."
+    witch: "<red>%name% was witched away."
+    blaze: "<red>%name% was burnt to a crisp by a Blaze."
+    piglin: "<red>%name% was porked by a Piglin."
+    ghast: "<red>%name% was ghasted away."
+    wither: "<red>%name% withered away."
+    ender_dragon: "<red>%name% was dragon food."
+    iron_golem: "<red>%name% was smashed by an Iron Golem."
+    wolf: "<red>%name% was devoured by a Wolf."
+    polar_bear: "<red>%name% was mauled by a Polar Bear."
+    guardian: "<red>%name% was spiked by a Guardian."
+    phantom: "<red>%name% was haunted by a Phantom."
+    slime: "<red>%name% was slimed."
+    magma_cube: "<red>%name% couldn't handle the Magma Cube."
+    silverfish: "<red>%name% was eaten by Silverfish."
+    vex: "<red>%name% was vexed to death."
+    pillager: "<red>%name% was pillaged."
+    vindicator: "<red>%name% was vindicated."
+    evoker: "<red>%name% saw some fangs."
+    stray: "<red>%name% strayed too far."
+    husk: "<red>%name% dried out."
+    drowned: "<red>%name% joined the drowned."
+    elder_guardian: "<red>%name% met the elder."
+    wither_skeleton: "<red>%name% got boned."
+
+  # Messages for environmental deaths
+  environment:
+    block_explosion: "<red>%name% was in the blast radius of an explosion."
+    contact: "<red>%name% was pricked to death."
+    cramming: "<red>%name% was squished in a crowd."
+    custom: "<red>%name% died under mysterious circumstances."
+    dragon_breath: "<red>%name% was consumed by dragon's breath."
+    drowning: "<red>%name% ran out of air underwater."
+    dryout: "<red>%name% dried out."
+    fall: "<red>%name% fell from a high place."
+    falling_block: "<red>%name% was crushed by a falling block."
+    fire: "<red>%name% burned in a fire."
+    fire_tick: "<red>%name% couldn't escape the flames."
+    fly_into_wall: "<red>%name% flew into a wall."
+    freeze: "<red>%name% froze to death."
+    hot_floor: "<red>%name% walked on too hot of a surface."
+    lava: "<red>%name% tried to swim in lava."
+    lightning: "<red>%name% was struck by lightning."
+    magic: "<red>%name% was killed by magic."
+    melting: "<red>%name% melted away."
+    poison: "<red>%name% succumbed to poison."
+    projectile: "<red>%name% was shot."
+    sonic_boom: "<red>%name% was blasted by a sonic boom."
+    starvation: "<red>%name% starved to death."
+    suffocation: "<red>%name% suffocated inside a block."
+    suicide: "<red>%name% took their own life."
+    thorns: "<red>%name% was killed by thorns."
+    void: "<red>%name% fell into the void."
+    wither: "<red>%name% withered away."
+    world_border: "<red>%name% crossed the world border."
+
+  # PvP death messages
+  pvp:
+    sword: "<red>%name% was sliced by %killer%."
+    bow: "<red>%name% was shot by %killer%."
+    trident: "<red>%name% was trident-ed by %killer%."
+    crossbow: "<red>%name% was crossbowed by %killer%."
+    potion: "<red>%name% was potioned by %killer%."
+    fire: "<red>%name% was set ablaze by %killer%."
+    explosion: "<red>%name% was exploded by %killer%."
+    fall: "<red>%name% was pushed off by %killer%."

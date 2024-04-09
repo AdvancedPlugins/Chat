@@ -1,0 +1,13 @@
+enabled: true
+
+# ends with %allow% to allow the effects to be executed, not the message.
+conditions:
+  - '%message% matchesregex \b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b || %message% matchesregex \b(?:[a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,6}\b : %allow%'
+
+# REPLACE_MESSAGE:<from>:<to> to replace the message with <to> if it contains <from>
+# MESSAGE:<message> to send a message to the player
+# CANCEL_EVENT to stop message from going through
+effects:
+  - 'CANCEL_EVENT'
+  - 'MESSAGE:&c&l(!) &c%player name%, advertising is not allowed on the server.'
+  # - 'CONSOLE_COMMAND:warn %player name% advertising' # you could also warn the player here

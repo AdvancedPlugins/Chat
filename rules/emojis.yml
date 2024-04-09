@@ -1,0 +1,38 @@
+# Configuration for Emojis
+
+enabled: true
+conditions:
+  - "%permissions% contains advancedchat.emoji || %is op% = true : %allow%"
+effects:
+  - "REPLACE_IN_MESSAGE:<3:\u2764"
+  - "REPLACE_IN_MESSAGE:*star*:\u2b50"
+  - "REPLACE_IN_MESSAGE:*yes*:\u2714"
+  - "REPLACE_IN_MESSAGE:*no*:\u274c"
+  - "REPLACE_IN_MESSAGE:*java*:\u2615"
+  - "REPLACE_IN_MESSAGE:*arrow*:\u27a1"
+  - 'REPLACE_IN_MESSAGE:*shrug*:¯\_(ツ)_/¯'
+  - 'REPLACE_IN_MESSAGE:*tableflip*: (╯°□°）╯︵ ┻━┻'
+  - "REPLACE_IN_MESSAGE:*totem*:\u1f5ff"
+  - "REPLACE_IN_MESSAGE:*tupin*:\u1f422"
+  - 'REPLACE_IN_MESSAGE:*maths*: (√π)∑'
+  - "REPLACE_IN_MESSAGE:*thinking*:\u1f914"
+  - "REPLACE_IN_MESSAGE:*mime*:\u1f3ad"
+  - "REPLACE_IN_MESSAGE:*pvp*:\u2694"
+  - "REPLACE_IN_MESSAGE:*peace*:\u270c"
+  - "REPLACE_IN_MESSAGE:*snow*:\u2744"
+  - 'REPLACE_IN_MESSAGE:*puffer*: <(°<°)>'
+  - 'REPLACE_IN_MESSAGE:*snow*:❄'
+  - 'REPLACE_IN_MESSAGE:*yey*:~ \(oo)/'
+  - 'REPLACE_IN_MESSAGE:*sloth*:<('' . '')>'
+  - "REPLACE_IN_MESSAGE:*cat*:=^• •^="
+  - 'REPLACE_IN_MESSAGE:*dab*:<(''.'')/'
+  - "REPLACE_IN_MESSAGE:*dog*:\u1f436"
+  - "REPLACE_IN_MESSAGE:*cube*:\u1f9ca"
+  - "REPLACE_IN_MESSAGE:*facepalm*:\u1f926"
+  - "REPLACE_IN_MESSAGE:*skull*:\u1f480"
+  - "REPLACE_IN_MESSAGE:*sunglasses*:\u1f60e"
+  - "REPLACE_IN_MESSAGE:*smile*:\u1f604"
+  - "REPLACE_IN_MESSAGE:*sad*:\u1f614"
+  - "REPLACE_IN_MESSAGE:*angry*:\u1f621"
+  - "REPLACE_IN_MESSAGE:*cry*:\u1f622"
+  - "REPLACE_IN_MESSAGE:*laugh*:\u1f602"

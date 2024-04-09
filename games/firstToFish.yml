@@ -1,0 +1,32 @@
+# Is Chat Game enabled?
+enabled: true
+
+# How long should the game last?
+length: 60
+
+# Game start routine. This is where you can configure the game start message and requirements.
+gameStart:
+  effects:
+    - "BROADCAST: "
+    - "BROADCAST:                                   &d&lQUICK GAME"
+    - "BROADCAST:        &fThe first person to &dcatch any fish&f wins the game!"
+    - "BROADCAST: "
+
+# Game end routine when someone wins. This is where you can configure the game end message and rewards.
+gameEndWinner:
+  type: CATCH_FISH # Find more types here: https://wiki.advancedplugins.net/abilities/triggers
+  effects:
+    - "BROADCAST: "
+    - "BROADCAST:                                &d&lCHAT GAME"
+    - "BROADCAST: &fThe game has ended! &e%player name% &fwas the first &dcatch a fish&f!"
+    - "BROADCAST: "
+    - "CONSOLE_COMMAND:eco give %player name% 250"
+
+# Game end routine when time runs out. This is where you can configure the game end message and rewards.
+gameEndNoWinner:
+  effects:
+    - "BROADCAST: "
+    - "BROADCAST:                          &d&lCHAT GAME"
+    - "BROADCAST:      &dNo one &fwas able to &dcatch a fish&f in time!"
+    - "BROADCAST:             &fThe game has ended! Better luck next time."
+    - "BROADCAST: "

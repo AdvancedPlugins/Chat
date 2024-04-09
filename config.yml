@@ -1,0 +1,51 @@
+# AdvancedChat
+# Version: @version@
+# Release date: @date@
+
+# Chat Configuration
+settings:
+  # Here is where you can configure chat event listener's priority.
+  # Don't modify unless you know what you are doing.
+  chatEventPriority: 'HIGHEST'
+
+lang: en
+
+mention:
+  enabled: true
+  char: "@"
+  replacement: "<bold><yellow>@%player_name%</yellow></bold>"
+  sound:
+    name: "entity.player.levelup"
+    volume: 1
+    pitch: 1
+
+commands:
+  clear:
+    repeat: 50
+    message: true
+
+# Chat Tags
+# Should a space be automatically added before a tag in chat?
+# When true, e.g. format: "[Member] playerName [tag]"
+# When false, e.g. format: "[Member] playerName[tag]"
+addSpaceBeforeTag: true
+
+# Games
+# Custom games can be found in `games` folder
+# Guide on how to create custom games can be found here: https://chat.advancedplugins.net/features/chat-games
+games:
+  # Are chat games enabled?
+  enabled: true
+  # How often should the chat games start?
+  interval: 300
+
+# Configure warn command
+warn:
+  # Warning thresholds
+  thresholds:
+    3:
+      commands:
+        - "kick %player% Excessive warnings"
+    4:
+      commands:
+        - "mute %player% 10m Excessive warnings"

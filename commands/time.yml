@@ -1,0 +1,38 @@
+# These commands are fully customisable, you can delete them, create new ones
+
+# Argument variables
+# - %arg-N-N% (example %arg-1-4%)
+# - %arg-N-END% (example %arg-2-END%)
+# - %command% (base command name)
+# - %label% (command used supporting aliases)
+
+# You can disable commands by changing the file extension.
+# For example change "time.yml" to "time.yml.off"
+
+baseCommand: /time
+description: Shows the current time
+permission: time.show
+aliases:
+  - /timenow
+
+# Put unlimited conditions and effects
+command:
+  - effects:
+      - "MESSAGE:&fThe time is now &e%time%"
+
+# Put unlimited conditions and effects
+invalidArgs:
+  - effects:
+      - "MESSAGE:&cInvalid args!"
+
+# Put unlimited subcommands and their conditions and effects
+subcommands:
+  day:
+    - conditions:
+        - '%time% < 12000 : %allow%'
+      effects:
+        - "MESSAGE:&aIt's day"
+    - conditions:
+        - "%time% >= 12000 : %allow%"
+      effects:
+        - "MESSAGE:&cIt's night"

@@ -1,0 +1,18 @@
+# These commands are fully customisable, you can delete them, create new ones
+
+# Argument variables
+# - %arg-N-N% (example %arg-1-4%)
+# - %arg-N-END% (example %arg-2-END%)
+# - %command% (base command name)
+# - %label% (command used supporting aliases)
+
+# You can disable commands by changing the file extension.
+# For example change "time.yml" to "time.yml.off"
+
+baseCommand: /discord
+description: Link to server's discord!
+
+# Put unlimited conditions and effects
+command:
+  - effects:
+      - "MESSAGE:&fJoin our discord server at&e https://discord.gg/yourdiscordinvite"

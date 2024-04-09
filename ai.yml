@@ -1,0 +1,49 @@
+# AI Powered chat handling
+# Powered by OpenAI
+
+# Is the AI chat filter enabled?
+enabled: true
+
+# If violating more than 1 filter, should player be punished for each violation or just the first one?
+multiple-violations: false
+
+# %message% will be replaced with the message which violated the filter.
+filters:
+  swearing:
+    enabled: true
+    # This sets the confidence threshold for the AI to flag violation in messages, with a range from 0.0 to 1.0.
+    # A higher threshold means the AI needs to be more confident that the message contains swearing before taking action.
+    # We recommend keeping this value at 0.8 or higher.
+    threshold: 0.85
+    action:
+      - "warn %player% Swearing is not allowed!"
+  sexual:
+    enabled: true
+    threshold: 0.85
+    action:
+      - "warn %player% Sexual messages are not allowed!"
+  hate:
+    enabled: true
+    threshold: 0.85
+    action:
+      - "warn %player% Hate messages are not allowed!"
+  harassment:
+    enabled: true
+    threshold: 0.85
+    action:
+      - "warn %player% Harassment is not tolerated!"
+  self-harm:
+    enabled: true
+    threshold: 0.85
+    action:
+      - "warn %player% Self-harm is a serious matter, please seek help."
+  violence:
+    enabled: true
+    threshold: 0.85
+    action:
+      - "warn %player% Messages promoting violence are not allowed!"
+
+
+logging:
+  # If enabled, the AI chat filter will log all filtered messages to the console as well as details of the filter.
+  enabled: true

@@ -1,0 +1,19 @@
+type: CHAT_MESSAGE # If you are parsing a chat message, use CHAT_MESSAGE. This means message will be surrounded in
+# [] tags. If you are creating a PLACEHOLDER, it will be using %% formatting, e.g. %item%
+
+# What is the name of the variable? This will be used within the tags, e.g. [item] or %item%
+name: item
+
+# Value of this variable, this uses the nashorn engine, so you can use any javascript here.
+# You are also able to access Player instance, e.g. player.getName() or player.getUniqueId()
+# As well as JavaPlugin using `plugin` variable, e.g. plugin.getServer().getOnlinePlayers().size()
+# Event variable is also available, you can use it depending on the event, if this is used for chat it would access AsyncPlayerChatEvent
+# Read more in the wiki here: TODO ADD WIKI LINK
+# This must always be a string (text)
+value: '"x"+player.getItemInHand().getAmount() + " " + capitalize(player.getItemInHand().getType().name())'
+
+# Hover, this can be:
+# Text field, saying whatever you want it to say.
+# Item field, showing the item in the hover.
+# Entity field, showing the entity in the hover.
+hover: player.getItemInHand()

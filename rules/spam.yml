@@ -1,0 +1,10 @@
+# Configuration for Anti Spam
+
+enabled: true
+conditions: []
+effects:
+  - 'SET_VARIABLE:messageDelay:1.5' # spam threshold in seconds, you can adjust it here.
+  - 'SET_VARIABLE:messageInterval%player name%:<math>%custom_lastMessage%player name%%-%system%</math>'
+  - 'CANCEL_EVENT <condition>%custom_messageInterval%player name%% > -<math>%custom_messageDelay%*1000</math> : %allow%</condition>'
+  - 'MESSAGE:&c&l(!) &c%player name%, spamming is not allowed on the server. <condition>%custom_messageInterval%player name%% > -<math>%custom_messageDelay%*1000</math> : %allow%</condition>'
+  - 'SET_VARIABLE:lastMessage%player name%:%system%'

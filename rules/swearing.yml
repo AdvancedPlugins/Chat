@@ -1,0 +1,14 @@
+enabled: true
+
+# This uses custom words list from our GitHub repository
+swearWordsDatabase:
+  - https://raw.githubusercontent.com/AdvancedPlugins/Chat/main/swear%20words/en.json
+
+# Should the curse words be obfuscated? (words replaced with asterisks)
+# If set to false, the message will not be sent at all.
+obfuscate: true
+
+# Message to send when a player swears
+action:
+  - 'warn %player% Inappropriate language'
+  - 'alertstaff %player% Inappropriate language [%message%]'

@@ -1,0 +1,9 @@
+# Configuration for Caps in Chat
+enabled: true
+conditions:
+  - '%permissions% contains advancedchat.caps || %is op% = true : %stop%'
+  - '%caps_percentage% > 70 : %allow%'
+effects:
+  - 'CANCEL_EVENT'
+  - 'MESSAGE:&c&l(!) &c%player name%, please do not use excessive caps.'
+  # - 'CONSOLE_COMMAND:warn %player name% Caps' # you could also warn the player here

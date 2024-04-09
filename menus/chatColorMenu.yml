@@ -1,0 +1,106 @@
+name: "&aChat Color"
+size: 36
+
+items:
+  filler:
+    type: BLACK_STAINED_GLASS_PANE
+    name: ' '
+  31:
+    type: PAPER
+    name: '&cClear your chat color.'
+    action: CLEAR_COLOR
+
+settings:
+  # Slots in which colors can be displayed
+  colorSlots: 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+
+  colorItem:
+    name: "%color_name% &rChat Color"
+    lore:
+      - '&7Click here to enable this chat color.'
+  noPermissionItem:
+    name: "%color_name% &rChat Color"
+    lore:
+      - '&cYou do not have permission to use this chat color.'
+      - '&7You can purchase this chat color at &bour store!'
+
+  # Permission: advancedchat.chatcolor.<key> e.g. advancedchat.color.white
+  colors:
+    white:
+      format: "<white>%message%</white>"
+      name: "&fWhite"
+      material: WHITE_STAINED_GLASS_PANE
+    dark_blue:
+      format: "<dark_blue>%message%</dark_blue>"
+      name: "&1Dark Blue"
+      material: BLUE_STAINED_GLASS_PANE
+    dark_green:
+      format: "<dark_green>%message%</dark_green>"
+      name: "&2Dark Green"
+      material: GREEN_STAINED_GLASS_PANE
+    dark_aqua:
+      format: "<dark_aqua>%message%</dark_aqua>"
+      name: "&3Dark Aqua"
+      material: CYAN_STAINED_GLASS_PANE
+    dark_red:
+      format: "<dark_red>%message%</dark_red>"
+      name: "&4Dark Red"
+      material: RED_STAINED_GLASS_PANE
+    dark_purple:
+      format: "<dark_purple>%message%</dark_purple>"
+      name: "&5Dark Purple"
+      material: PURPLE_STAINED_GLASS_PANE
+    gold:
+      format: "<gold>%message%</gold>"
+      name: "&6Gold"
+      material: YELLOW_STAINED_GLASS_PANE
+    gray:
+      format: "<gray>%message%</gray>"
+      name: "&7Gray"
+      material: LIGHT_GRAY_STAINED_GLASS_PANE
+    dark_gray:
+      format: "<dark_gray>%message%</dark_gray>"
+      name: "&8Dark Gray"
+      material: GRAY_STAINED_GLASS_PANE
+    blue:
+      format: "<blue>%message%</blue>"
+      name: "&9Blue"
+      material: LIGHT_BLUE_STAINED_GLASS_PANE
+    green:
+      format: "<green>%message%</green>"
+      name: "&aGreen"
+      material: LIME_STAINED_GLASS_PANE
+    aqua:
+      format: "<aqua>%message%</aqua>"
+      name: "&bAqua"
+      material: LIGHT_BLUE_STAINED_GLASS_PANE
+    red:
+      format: "<red>%message%</red>"
+      name: "&cRed"
+      material: ORANGE_STAINED_GLASS_PANE
+    light_purple:
+      format: "<light_purple>%message%</light_purple>"
+      name: "&dLight Purple"
+      material: PINK_STAINED_GLASS_PANE
+    yellow:
+      format: "<yellow>%message%</yellow>"
+      name: "&eYellow"
+      material: YELLOW_STAINED_GLASS_PANE
+    bold:
+      format: "<bold>%message%</bold>"
+      name: "&lBold"
+      material: IRON_BLOCK
+      lore:
+        - '&f&lBold effect will be applied to your chat text.'
+    italic:
+      format: "<italic>%message%</italic>"
+      name: "&f&oItalic&r"
+      material: GOLD_BLOCK
+      lore:
+        - '&f&oItalic effect will be applied to your chat text.'
+    underline:
+      format: "<underlined>%message%</underlined>"
+      name: "&nUnderline&r"
+      material: DIAMOND_BLOCK
+      lore:
+        - '&f&nUnderline effect will be applied to your chat text.'

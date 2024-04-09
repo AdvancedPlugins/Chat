@@ -1,0 +1,30 @@
+# Chat Channels
+# Permission: advancedchat.channel.join.<channel>
+# Permission: advancedchat.channels to list channels using /channels command
+# Permission: advancedchat.channel.autojoin.<channel name> to auto join channel on join
+# Permission: advancedchat.channel.leave.<channel> to have channel leave permission
+
+# Should player automatically join an available channel on join?
+autoJoin: true
+
+prefix:
+  enabled: true
+  channelPrefix: "%channel_color%[%channel_name%] "
+
+quickMessage:
+  char: '!'
+
+channels:
+  sc: #Staff chat
+    name: 'Staff Chat'
+    # %channel_color%
+    color: "<green>"
+    # Whether channel text should always be visible even when not in channel? You must have channel permission
+    alwaysVisible: true
+    # Only send to players in the same world
+    sameWorld: false
+    # Channel messages range
+    # If set to 0, range won't be enabled. Set to any other number to enable.
+    range: 0
+    # Lowest priority will come first
+    priority: 10

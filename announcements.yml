@@ -1,0 +1,26 @@
+# Announcements Configuration
+enabled: true
+
+# Should announcements order be random?
+random: true
+
+# Announcements interval in seconds
+interval: 300
+
+order:
+  - first
+  - second
+
+announcements:
+  first:
+    - '<gradient:white:aqua:white><strikethrough>                                                                  </gradient>'
+    - ' '
+    - "  <white>Join our Discord server by using <aqua><click:open_url:'https://discord.gg'>Clicking Here!</click></aqua>"
+    - ' '
+    - '<gradient:white:aqua:white><strikethrough>                                                                  </gradient>'
+  second:
+    - '<gradient:white:aqua:white><strikethrough>                                                                  </gradient>'
+    - ' '
+    - ' <white>Report players violating the rules using <aqua>/report'
+    - ' '
+    - '<gradient:white:aqua:white><strikethrough>                                                                  </gradient>'
