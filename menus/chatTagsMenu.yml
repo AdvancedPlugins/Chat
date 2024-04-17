@@ -1,14 +1,40 @@
-name: "&6Chat Tags"
-size: 36
+# Chat Tags Configuration
+name: "&b&lChat Tags"
+size: 45
+
+# Should locked tags be shown in the menu?
+showLockedTags: true
+
+# Should a space be automatically added before a tag in chat?
+# When true, e.g. format: "[Member] playerName [tag]"
+# When false, e.g. format: "[Member] playerName[tag]"
+addSpaceBeforeTag: true
 
 items:
-  filler:
+  0-8:
     type: BLACK_STAINED_GLASS_PANE
     name: ' '
-  31:
+  27-35:
+    type: BLACK_STAINED_GLASS_PANE
+    name: ' '
+  '39':
+    name: '&cPrevious Page'
+    action: PREVIOUS_PAGE
+    head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjOTZhNWMzZDEzYzMxOTkxODNlMWJjN2YwODZmNTRjYTJhNjUyNzEyNjMwM2FjOGUyNWQ2M2UxNmI2NGNjZiJ9fX0=
+  '40':
     type: PAPER
     name: '&cReset your chat tag.'
+    lore:
+      - ' &8● &7Click here to &cclear&7 your chat tag.'
     action: RESET_TAG
+  '41':
+    name: '&cNext Page'
+    action: NEXT_PAGE
+    head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzMzYWU4ZGU3ZWQwNzllMzhkMmM4MmRkNDJiNzRjZmNiZDk0YjM0ODAzNDhkYmI1ZWNkOTNkYThiODEwMTVlMyJ9fX0=
+  '44':
+    type: WOODEN_DOOR
+    name: '&cClose the menu'
+    action: CLOSE
 
 settings:
   # Slots in which colors can be displayed
@@ -24,6 +50,51 @@ settings:
       - '<gray>You can purchase this chat tag at <aqua>our store!'
 
   tags: # Permissions are: advancedchat.tag.<tag> e.g. advancedchat.tag.mvp
+    hacker:
+      format: "<dark_green>[HACKER]</dark_green>"
+      material: COMMAND_BLOCK
+    gg:
+      format: "<gold>[GG]</gold>"
+      material: GOLDEN_CARROT
+    noob:
+      format: "<red>[NOOB]</red>"
+      material: WOODEN_SWORD
+    rekt:
+      format: "<dark_purple>[#REKT]</dark_purple>"
+      material: ANVIL
+    salty:
+      format: "<blue>[SALTY]</blue>"
+      material: WATER_BUCKET
+    ghost:
+      format: "<gray>[GHOST]</gray>"
+      material: GHAST_TEAR
+    hype:
+      format: "<yellow>[HYPE]</yellow>"
+      material: FIREWORK_ROCKET
+    bae:
+      format: "<light_purple>[BAE]</light_purple>"
+      material: PINK_TULIP
+    lol:
+      format: "<green>[LOL]</green>"
+      material: SLIME_BALL
+    savage:
+      format: "<dark_red>[SAVAGE]</dark_red>"
+      material: DIAMOND_SWORD
+    fam:
+      format: "<dark_aqua>[FAM]</dark_aqua>"
+      material: LEAD
+    yeet:
+      format: "<blue>[YEET]</blue>"
+      material: FEATHER
+    flex:
+      format: "<gold>[FLEX]</gold>"
+      material: DIAMOND_CHESTPLATE
+    lit:
+      format: "<red>[LIT]</red>"
+      material: BLAZE_POWDER
+    sus:
+      format: "<light_purple>[SUS]</light_purple>"
+      material: ENDER_EYE
     mvp:
       format: "<dark_purple>[MVP]</dark_purple>"
       material: DIAMOND
