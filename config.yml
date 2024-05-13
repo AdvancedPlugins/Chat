@@ -4,6 +4,8 @@
 
 # Chat Configuration
 settings:
+  # Whether AdvancedChat should handle chat formats and ranges
+  disableChat: false
   # Here is where you can configure chat event listener's priority.
   # Don't modify unless you know what you are doing.
   chatEventPriority: 'HIGHEST'
@@ -23,12 +25,6 @@ commands:
   clear:
     repeat: 50
     message: true
-
-# Chat Tags
-# Should a space be automatically added before a tag in chat?
-# When true, e.g. format: "[Member] playerName [tag]"
-# When false, e.g. format: "[Member] playerName[tag]"
-addSpaceBeforeTag: true
 
 # Games
 # Custom games can be found in `games` folder
