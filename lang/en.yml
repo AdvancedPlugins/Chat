@@ -14,10 +14,11 @@ messages:
   clear:
     onClear: "<green>The chat has been cleared by %player_name%</green>"
   msg:
+    empty: "%prefix%<red>Message can't be empty!</red>"
     yourself: "%prefix%<red>You can't send a message to yourself!</red>"
     targetOffline: "%prefix%<red>Player isn't online!</red>"
-    outgoing: "<red>You </red><dark_gray>>> </dark_gray><red>%player_name%</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
-    incoming: "<red>%sender_name% </red><dark_gray>>> </dark_gray><red>You</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+    outgoing: "<red>You </red><dark_gray>>> </dark_gray><red>%recipient_name% (%recipient_server%)</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
+    incoming: "<red>%sender_name% (%sender_server%)</red><dark_gray>>> </dark_gray><red>You</red><dark_gray> >> </dark_gray><gray>%message%</gray>"
   reply:
     noReply: "%prefix%<red>No user to reply to!</red>"
   ignore:
@@ -64,17 +65,29 @@ messages:
       playerFormat:
         - '<gray>- </gray><white>%player_name%'
   channel:
-    invalid: "%prefix%<red>%channel_name% doesn't exist</red>"
+    invalid: "%prefix%<red>%channel_id% doesn't exist</red>"
     noPermissionJoin: "%prefix%<red>You don't have permission to join this channel!</red>"
     noPermissionLeave: "%prefix%<red>You don't have permission to leave this channel!</red>"
     alreadyJoined: "%prefix%<red>You are already in this channel!</red>"
     alreadyJoinedRecipient: "%prefix%<red>Target is already in this channel!</red>"
     join: "%prefix%<green>You have joined %channel_name% channel!</green>"
-    joinRecipient: "%prefix%<green>You've made %recipient_name% joined %channel_name% channel!</green>"
+    joinRecipient: "%prefix%<green>You've made %recipient_name% join %channel_name% channel!</green>"
     leave: "%prefix%<green>You have left %channel_name% channel!</green>"
     leaveRecipient: "%prefix%<green>You've made %recipient_name% leave %channel_name% channel!</green>"
     noChannel: "%prefix%<red>You are not in any channel!</red>"
     noChannelRecipient: "%prefix%<red>Target is not in any channel!</red>"
+    info:
+      - "<gray>Channel:</gray> <yellow>%advancedchat_channel_name% (%advancedchat_channel_id%)"
+      - "<gray>Color:</gray> <yellow>%advancedchat_channel_color%color"
+      - "<gray>Always Visible:</gray> <yellow>%advancedchat_channel_always_visible%"
+      - "<gray>Same World:</gray> <yellow>%advancedchat_same_world%"
+      - "<gray>Cross Server:</gray> <yellow>%advancedchat_cross_server%"
+      - "<gray>Range:</gray> <yellow>%advancedchat_channel_range%"
+      - "<gray>Priority:</gray> <yellow>%advancedchat_channel_priority%"
+    offAutoJoin: "%prefix%<red>Auto-join disabled!</red>"
+    offAutoJoinRecipient: "%prefix%<red>Disabled auto-join for %recipient_name%!</red>"
+    onAutoJoin: "%prefix%<green>Auto-join enabled!</green>"
+    onAutoJoinRecipient: "%prefix%<green>Enabled auto-join for %recipient_name%!</green>"
   channels:
     listFormat:
       - '<green>Available channels list:'
@@ -137,13 +150,11 @@ commands:
 
 chatMotd: # Leave empty to disable
   - " "
-  - " "
-  - " "
-  - "               <gold>Welcome <white>%player_name%</white> to <white><bold>Our Server</bold></white></gold>"
-  - "   <yellow>Thank you for joining us! Your adventure awaits...</yellow>"
-  - ""
-  - "          <gold><bold>| VISIT OUR STORE</bold>: <white>/buy</white></gold>"
-  - "          <aqua><bold>| JOIN OUR DISCORD</bold>: <white>/discord</white></aqua>"
-  - " <gray><i>Stay updated with latest news and connect with community!</i></gray>"
-  - " "
-
+  - "%player_head_8_1%"
+  - "%player_head_8_2%               <gold>Welcome <white>%player_name%</white> to <white><bold>Our Server</bold></white></gold>"
+  - "%player_head_8_3%   <yellow>Thank you for joining us! Your adventure awaits...</yellow>"
+  - "%player_head_8_4%"
+  - "%player_head_8_5%           <gold><bold>| VISIT OUR STORE</bold>: <white>/buy</white></gold>"
+  - "%player_head_8_6%           <aqua><bold>| JOIN OUR DISCORD</bold>: <white>/discord</white></aqua>"
+  - "%player_head_8_7%  <gray><i>Stay updated with latest news and connect with us!</i></gray>"
+  - "%player_head_8_8%"
