@@ -1,0 +1,13 @@
+removeCommandsWithColons: true
+hiddenCommands:
+  - ver
+  - version
+  - about
+  - bukkit
+  - icanhasbukkit
+  - help
+  - ?
+  - me
+  - plugins
+  - pl
+  

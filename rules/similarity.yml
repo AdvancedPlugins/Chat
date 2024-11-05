@@ -1,3 +1,4 @@
+# Bypass permission: advancedchat.bypass.rule.similarity
 enabled: true
 conditions:
   - '%message_similarity% > 90 : %allow%'

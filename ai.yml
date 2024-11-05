@@ -7,6 +7,12 @@ enabled: true
 # If violating more than 1 filter, should player be punished for each violation or just the first one?
 multiple-violations: false
 
+# allow swearing in these channels
+disabledChannels:
+  - sc
+# Should the plugin check for swear words in private messages?
+inMsg: true
+
 # %message% will be replaced with the message which violated the filter.
 filters:
   swearing:

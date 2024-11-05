@@ -9,6 +9,10 @@ showLockedTags: true
 # When true, e.g. format: "[Member] playerName [tag]"
 # When false, e.g. format: "[Member] playerName[tag]"
 addSpaceBeforeTag: true
+# Should a space be automatically added after a tag in chat?
+# When true, e.g. format: "[tag] text message"
+# When false, e.g. format: "[tag]text message"
+addSpaceAfterTag: false
 
 items:
   0-8:
@@ -25,7 +29,7 @@ items:
     type: PAPER
     name: '&cReset your chat tag.'
     lore:
-      - ' &8● &7Click here to &cclear&7 your chat tag.'
+      - ' &8- &7Click here to &cclear&7 your chat tag.'
     action: RESET_TAG
   '41':
     name: '&cNext Page'

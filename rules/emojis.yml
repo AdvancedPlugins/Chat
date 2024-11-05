@@ -1,8 +1,7 @@
 # Configuration for Emojis
 
 enabled: true
-conditions:
-  - "%permissions% contains advancedchat.emoji || %is op% = true : %allow%"
+conditions: []
 effects:
   - "REPLACE_IN_MESSAGE:<3:\u2764"
   - "REPLACE_IN_MESSAGE:*star*:\u2b50"

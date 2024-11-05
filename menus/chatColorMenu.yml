@@ -9,6 +9,18 @@ items:
     type: PAPER
     name: '&cClear your chat color.'
     action: CLEAR_COLOR
+  '30':
+    name: '&cPrevious Page'
+    action: PREVIOUS_PAGE
+    head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODFjOTZhNWMzZDEzYzMxOTkxODNlMWJjN2YwODZmNTRjYTJhNjUyNzEyNjMwM2FjOGUyNWQ2M2UxNmI2NGNjZiJ9fX0=
+  '32':
+    name: '&cNext Page'
+    action: NEXT_PAGE
+    head: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzMzYWU4ZGU3ZWQwNzllMzhkMmM4MmRkNDJiNzRjZmNiZDk0YjM0ODAzNDhkYmI1ZWNkOTNkYThiODEwMTVlMyJ9fX0=
+  '35':
+    type: WOODEN_DOOR
+    name: '&cClose the menu'
+    action: CLOSE
 
 settings:
   # Slots in which colors can be displayed

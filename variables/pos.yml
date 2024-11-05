@@ -2,7 +2,7 @@ type: CHAT_MESSAGE # If you are parsing a chat message, use CHAT_MESSAGE. This m
 # [] tags. If you are creating a PLACEHOLDER, it will be using %% formatting, e.g. %item%
 
 # What is the name of the variable? This will be used within the tags, e.g. [item] or %item%
-name: item
+name: pos
 
 # Value of this variable, this uses the nashorn engine, so you can use any javascript here.
 # You are also able to access Player instance, e.g. player.getName() or player.getUniqueId()
@@ -10,14 +10,7 @@ name: item
 # Event variable is also available, you can use it depending on the event, if this is used for chat it would access AsyncPlayerChatEvent
 # Read more in the wiki here: TODO ADD WIKI LINK
 # This must always be a string (text)
-value: '"x"+player.getItemInHand().getAmount() + " " + capitalize(player.getItemInHand().getType().name())'
-
-# Allows to show the actual display name of the item instead of showing just the material name.
-# Uncomment both the value and fallback-value fields below to enable this feature.
-# Use only on PAPER servers and don't forget to comment out the value field above.
-#value: 'component("x"+player.getItemInHand().getAmount() + " " + componentString(player.getItemInHand().getItemMeta().displayName()))'
-# Fallback value, this is used if processing the value throws an exception.
-#fallback-value: '"x"+player.getItemInHand().getAmount() + " " + capitalize(player.getItemInHand().getType().name())'
+value: 'player.getLocation().getBlockX() + " " + player.getLocation().getBlockY() + " " + player.getLocation().getBlockZ()'
 
 # Hover, this can be:
 # Text field, saying whatever you want it to say.

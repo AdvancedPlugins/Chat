@@ -32,3 +32,5 @@ chat:
 # Customisable range. If set to 0, range will be disabled.
 # Channel range overrides this range and takes a higher priority.
 range: 0.0
+# Whether to use cross-server chat
+crossServer: false

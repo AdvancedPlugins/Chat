@@ -1,8 +1,15 @@
 enabled: true
+# Bypass permission: advancedchat.bypass.rule.swearing
 
 # This uses custom words list from our GitHub repository
 swearWordsDatabase:
   - https://raw.githubusercontent.com/AdvancedPlugins/Chat/main/swear%20words/en.json
+
+# allow swearing in these channels
+disabledChannels:
+  - sc
+# Should the plugin check for swear words in private messages?
+inMsg: true
 
 # Should the curse words be obfuscated? (words replaced with asterisks)
 # If set to false, the message will not be sent at all.
@@ -11,4 +18,4 @@ obfuscate: true
 # Message to send when a player swears
 action:
   - 'warn %player% Inappropriate language'
-  - 'alertstaff %player% Inappropriate language [%message%]'
+  - 'alert %player% Inappropriate language [%message%]'

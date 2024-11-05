@@ -9,6 +9,9 @@ settings:
   # Here is where you can configure chat event listener's priority.
   # Don't modify unless you know what you are doing.
   chatEventPriority: 'HIGHEST'
+  # Whether if player has someone ignored, it should also ignore their chat messages.
+  # Currently, it only ignores private messages between the two players.
+  ignore-command-ignores-chat: false
 
 lang: en
 

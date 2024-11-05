@@ -10,6 +10,7 @@ deathMessagesEnabled: true
 nonPvPDeathMessagesEnabled: true
 
 # You can delete the message to revert it to default
+# You can use list of multiple messages for and a random one will be selected each time
 deathMessages:
   # General message for unspecified deaths
   default: "<red>%name% died under mysterious circumstances."
@@ -54,7 +55,9 @@ deathMessages:
     dragon_breath: "<red>%name% was consumed by dragon's breath."
     drowning: "<red>%name% ran out of air underwater."
     dryout: "<red>%name% dried out."
-    fall: "<red>%name% fell from a high place."
+    fall:
+      - "<red>%name% fell from a high place."
+      - "<red>%name% is having trouble flying."
     falling_block: "<red>%name% was crushed by a falling block."
     fire: "<red>%name% burned in a fire."
     fire_tick: "<red>%name% couldn't escape the flames."

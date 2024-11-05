@@ -6,23 +6,33 @@ enabled: true
 # Permission:
 #  "advancedchat.joinformat.default", same permission for leave format
 #  "advancedchat.ignorejoinformat.default" = don't show join messages
+#  "advancedchat.ignorequitformat.default" = don't show quit messages
 # Priority order of the formats is from the bottom to the top, so first format is the lowest priority, last is the highest.
 formats:
   default:
     join: # Join message configuration.
       show: true # Should the join message be broadcasted?
+      crossServer: true # Should join messages be broadcasted across servers?
+      conditions:
+        - "%first join% = true : %allow%"
+      effects: # https://wiki.advancedplugins.net/abilities/introduction
+        - "ACTION_BAR:&eFirst join! Welcome!"
+      # is independent of the conditions. If you want to only send messages on conditions, use MESSAGE effect in the effects list and delete this
       message: # You can use toast messages here, as explained on wiki: https://chat.advancedplugins.net/main/gradients-toasts-and-more
         - '<yellow>%player_name%</yellow> <gray>joined the game'
     quit:
       show: true # Should the quit message be broadcasted?
+      crossServer: true # Should quit messages be broadcasted across servers?
       message: # You can use toast messages here, as explained on wiki: https://chat.advancedplugins.net/main/gradients-toasts-and-more
         - '<yellow>%player_name%</yellow> <gray>left the game'
   admin:
     join:
-      show: true
+      show: false
+      crossServer: true
       message:
         - '<yellow>%player_name%</yellow> <gray>joined the game'
     quit:
-      show: true
+      show: false
+      crossServer: true
       message:
         - '<yellow>%player_name%</yellow> <gray>left the game'

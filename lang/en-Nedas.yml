@@ -120,14 +120,6 @@ messages:
         - '%channel_list%'
       channelFormat:
         - '<gray>- </gray><white>%channel_name%'
-  hideChat:
-    start: "%prefix%<green>You are now hiding all chat messages</green>"
-    stop: "%prefix%<red>You are no longer hiding chat messages</red>"
-  hideAnnouncements:
-    start: "%prefix%<green>You are now hiding all announcement messages</green>"
-    stop: "%prefix%<red>You are no longer hiding announcement messages</red>"
-  announceConfig:
-    invalid: "%prefix%<red>Invalid announcement %announcement%!</red>"
 
 commands:
   info:
@@ -149,8 +141,6 @@ commands:
     - "<gray>Bypass IgnoreAll:</gray> <yellow>%advancedchat_bypass_ignore_all%"
     - "<gray>Use Mention:</gray> <yellow>%advancedchat_use_mention%"
     - "<gray>Can be Mentioned:</gray> <yellow>%advancedchat_allow_mentioned%"
-    - "<gray>Hiding chat:</gray> <yellow>%advancedchat_hide_chat%"
-    - "<gray>Hiding announcements:</gray> <yellow>%advancedchat_hide_announcements%"
   commands:
     listFormat:
       - "<yellow>Custom Commands:</yellow>"

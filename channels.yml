@@ -10,6 +10,10 @@ autoJoin: true
 prefix:
   enabled: true
   channelPrefix: "%channel_color%[%channel_name%] "
+  hover:
+    - '<yellow>Join <gold>%channel_name%'
+  click: "SUGGEST_COMMAND:!%channel_id% "
+  #click: 'RUN_COMMAND:/channel join %channel_id%'
 
 quickMessage:
   char: '!'
@@ -17,12 +21,18 @@ quickMessage:
 channels:
   sc: #Staff chat
     name: 'Staff Chat'
+    # Can be used if you want different name then the name above to be used somewhere
+    # Like [SC] used in channel messages, but Staff Chat (name) used in channel join/leave messages
+    # %channel_prefix%
+    prefix: 'Staff'
     # %channel_color%
     color: "<green>"
     # Whether channel text should always be visible even when not in channel? You must have channel permission
     alwaysVisible: true
     # Only send to players in the same world
     sameWorld: false
+    # Whether to use cross-server chat
+    crossServer: false
     # Channel messages range
     # If set to 0, range won't be enabled. Set to any other number to enable.
     range: 0

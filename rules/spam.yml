@@ -1,5 +1,5 @@
 # Configuration for Anti Spam
-
+# Bypass permission: advancedchat.bypass.rule.spam
 enabled: true
 conditions: []
 effects:

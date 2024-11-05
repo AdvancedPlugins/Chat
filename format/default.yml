@@ -31,8 +31,10 @@ suffix:
 chat:
   text: '%message%'
   hover:
-    - '&cReport %player_name%'
+    - '<red>Report %player_name%'
   click: 'SUGGEST_COMMAND:/report %player_name%'
 # Customisable range. If set to 0, range will be disabled.
 # Channel range overrides this range and takes a higher priority.
 range: 0.0
+# Whether to use cross-server chat
+crossServer: false

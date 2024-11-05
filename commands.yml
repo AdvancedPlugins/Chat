@@ -1,0 +1,397 @@
+# Allows to customize commands and their subcommand
+# Please note that reload won't work and the server needs to be FULLY restarted in order to apply changes
+
+advancedchat:
+  enabled: true
+  command: advancedchat
+  permission: advancedchat.use
+  description: Main command for AdvancedChat
+  aliases:
+    - achat
+    - chat
+    - achats
+    - ac
+    - adc
+  subcommands:
+    announceconfig:
+      enabled: true
+      command: announceconfig
+      permission: advancedchat.command.announceconfig
+      description: Announce a message from the announcement config
+      aliases: [ ]
+    announce:
+      enabled: true
+      command: announce
+      permission: advancedchat.command.announce
+      description: Announce a message to all players
+      aliases: []
+      args:
+        message: message
+    clear:
+      enabled: true
+      command: clear
+      permission: advancedchat.command.clear
+      description: Clear the chat
+      aliases: []
+    info:
+      enabled: true
+      command: info
+      permission: advancedchat.command.info
+      description: Display information
+      aliases: []
+    preview:
+      enabled: true
+      command: preview
+      permission: advancedchat.command.preview
+      description: Preview an auto-announcement message privately
+      aliases: []
+      args:
+        id: id
+    reload:
+      enabled: true
+      command: reload
+      permission: advancedchat.command.reload
+      description: Reload the plugin
+      aliases: []
+    commands:
+      enabled: true
+      command: commands
+      permission: advancedchat.command.commands
+      description: List all custom commands
+      aliases: []
+alert:
+  enabled: true
+  command: alert
+  permission: advancedchat.command.alert
+  description: Sends an alert message to all staff members
+  args:
+    message: message
+channel:
+  enabled: true
+  command: channel
+  description: Change your chat channel
+  aliases:
+    - ch
+  subcommands:
+    join:
+      enabled: true
+      command: join
+      permission: advancedchat.command.channel.join
+      description: Join a channel
+      aliases: []
+      args:
+        channel: channel
+        applyFor: applyFor
+    leave:
+      enabled: true
+      command: leave
+      permission: advancedchat.command.channel.leave
+      description: Leave a channel
+      aliases: []
+      args:
+        applyFor: applyFor
+    info:
+      enabled: true
+      command: info
+      permission: advancedchat.command.channel.info
+      description: Info about channel
+      aliases: []
+      args:
+        channel: channel
+    autojoin:
+      enabled: true
+      command: autojoin
+      permission: advancedchat.command.channel.autojoin
+      description: Toggle auto-join for channels
+      aliases: []
+      args:
+        applyFor: applyFor
+channels:
+  enabled: true
+  command: channels
+  permission: advancedchat.channels
+  description: List all available channels
+  aliases:
+    - chs
+channelspy:
+  enabled: true
+  command: channelspy
+  permission: advancedchat.command.channel.spy
+  description: Spy on messages from a specific channel
+  aliases:
+    - chspy
+  subcommands:
+    all:
+      enabled: true
+      command: all
+      permission: advancedchat.command.channel.spy.all
+      description: Spy on messages from all channels
+      aliases: []
+      args:
+        applyFor: applyFor
+    channel:
+      enabled: true
+      command: channel
+      permission: advancedchat.command.channel.spy.channel
+      description: Spy on messages from a specific channel
+      aliases: []
+      args:
+        channel: channel
+        applyFor: applyFor
+    list:
+      enabled: true
+      command: list
+      permission: advancedchat.command.channel.spy.list
+      description: List all channels you are spying on
+      aliases: []
+      args:
+        applyFor: applyFor
+channelunspy:
+  enabled: true
+  command: channelunspy
+  permission: advancedchat.command.channel.unspy
+  description: Stop spying on messages from a specific channel
+  aliases:
+    - chunspy
+  subcommands:
+    all:
+      enabled: true
+      command: all
+      permission: advancedchat.command.channel.unspy.all
+      description: Stop spying on messages from all channels
+      aliases: []
+      args:
+        applyFor: applyFor
+    channel:
+      enabled: true
+      command: channel
+      permission: advancedchat.command.channel.unspy.channel
+      description: Stop spying on messages from a specific channel
+      aliases: []
+      args:
+        channel: channel
+        applyFor: applyFor
+msg:
+  enabled: true
+  command: msg
+  permission: advancedchat.command.msg
+  description: Send a private message to a player
+  aliases:
+    - amsg
+    - m
+    - tell
+    - whisper
+    - w
+    - t
+    - pm
+    - message
+  args:
+    target: target
+    message: message
+reply:
+  enabled: true
+  command: reply
+  permission: advancedchat.command.reply
+  description: Reply to the last private message
+  aliases:
+    - r
+  args:
+    message: message
+spy:
+  enabled: true
+  command: spy
+  permission: advancedchat.command.spy
+  description: Spy on private messages
+  aliases:
+    - msgspy
+    - aspy
+  subcommands:
+    all:
+      enabled: true
+      command: all
+      permission: advancedchat.command.spy.all
+      description: Spy on all private messages
+      aliases: []
+      args:
+        applyFor: applyFor
+    player:
+      enabled: true
+      command: player
+      permission: advancedchat.command.spy.player
+      description: Spy on a specific player's private messages
+      aliases: []
+      args:
+        target: target
+        applyFor: applyFor
+    list:
+      enabled: true
+      command: list
+      permission: advancedchat.command.spy.list
+      description: List all players you are spying on
+      aliases: []
+      args:
+        applyFor: applyFor
+unspy:
+  enabled: true
+  command: unspy
+  permission: advancedchat.command.unspy
+  description: Stop spying on private messages
+  aliases:
+    - msgunspy
+    - aunspy
+  subcommands:
+    all:
+      enabled: true
+      command: all
+      permission: advancedchat.command.unspy.all
+      description: Stop spying on all private messages
+      aliases: []
+      args:
+        applyFor: applyFor
+    player:
+      enabled: true
+      command: player
+      permission: advancedchat.command.unspy.player
+      description: Stop spying on a specific player's private messages
+      aliases: []
+      args:
+        target: target
+        applyFor: applyFor
+ignore:
+  enabled: true
+  command: ignore
+  permission: advancedchat.command.ignore
+  description: Ignore player's private messages
+  aliases:
+    - aignore
+  subcommands:
+    all:
+      enabled: true
+      command: all
+      permission: advancedchat.command.ignore.all
+      description: Ignore all player's messages
+      aliases: []
+      args:
+        applyFor: applyFor
+    player:
+      enabled: true
+      command: player
+      permission: advancedchat.command.ignore.player
+      description: Ignore a specific player's messages
+      aliases: []
+      args:
+        target: target
+        applyFor: applyFor
+    list:
+      enabled: true
+      command: list
+      permission: advancedchat.command.ignore.list
+      description: List all players you are ignoring
+      aliases: []
+      args:
+        applyFor: applyFor
+unignore:
+  enabled: true
+  command: unignore
+  permission: advancedchat.command.unignore
+  description: Stop ignoring player's messages
+  aliases:
+    - aunignore
+  subcommands:
+    all:
+      enabled: true
+      command: all
+      permission: advancedchat.command.unignore.all
+      description: Stop ignoring all player's messages
+      aliases: []
+      args:
+        applyFor: applyFor
+    player:
+      enabled: true
+      command: player
+      permission: advancedchat.command.unignore.player
+      description: Stop ignoring a specific player's messages
+      aliases: []
+      args:
+        target: target
+        applyFor: applyFor
+chatcolor:
+  enabled: true
+  command: chatcolor
+  permission: advancedchat.command.chatcolor
+  description: Change your chat color
+  aliases:
+    - color
+    - colors
+    - chatcolors
+    - chatcolor
+tags:
+  enabled: true
+  command: tags
+  permission: advancedchat.command.tags
+  description: Change your chat tag
+  aliases:
+    - tag
+    - tags
+    - chattags
+    - chattag
+  subcommands:
+    apply:
+      enabled: true
+      command: apply
+      permission: advancedchat.command.tags.apply
+      description: Apply a tag
+      aliases: []
+      args:
+        player: player
+        tag: tag
+    create:
+      enabled: true
+      command: create
+      permission: advancedchat.command.tags.create
+      description: Create a tag
+      aliases: []
+      args:
+        id: id
+        tag: tag
+        material: material
+    delete:
+      enabled: true
+      command: delete
+      permission: advancedchat.command.tags.delete
+      description: Delete a tag
+      aliases: []
+      args:
+        tag: tag
+    list:
+      enabled: true
+      command: list
+      permission: advancedchat.command.tags.list
+      description: List all tags
+      aliases: []
+      args:
+        page: page
+warn:
+  enabled: true
+  command: warn
+  permission: advancedchat.command.warn
+  description: Warn a player
+  aliases:
+    - awarn
+  args:
+    target: target
+    message: message
+hidechat:
+  enabled: true
+  command: hidechat
+  permission: advancedchat.command.hidechat
+  description: Hide chat messages
+  aliases:
+    - chathide
+hideannouncements:
+  enabled: true
+  command: hideannouncements
+  permission: advancedchat.command.hideannouncements
+  description: Hide all announcements
+  aliases:
+    - announcementshide
