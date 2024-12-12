@@ -1,0 +1,17 @@
+# Bubbles are displayed above the player's head when they send a message.
+# To use a bubble, the player must have the permission "advancedchat.bubble.<bubble_id>"
+
+bubbles:
+  test: # Bubble ID
+    lines: # Lines to display
+      - "says:" # Line 1
+      - "%message%" # Line 2
+    durationTicks: 60 # Duration in ticks
+    maxCount: 3 # Max count of bubbles to display at once
+    maxLines: 4 # Max lines to display for each bubble
+    maxLength: 20 # Max length of a line
+    scale: 1.0 # Scale of the bubble
+    cutOffMessage: "..." # Message to append to the end of the message if it is too long
+    removeOnMove: false # Remove the bubble when the player moves
+    backgroundARGB: 838860800 # Background color of the bubble (https://argb-int-calculator.netlify.app/)
+    priority: 100 # Priority of the bubble. If player has permission for multiple bubbles, the one with the highest priority will be used.
