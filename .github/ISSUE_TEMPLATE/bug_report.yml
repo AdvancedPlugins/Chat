@@ -6,9 +6,10 @@ body:
     attributes:
       value: |
         Thank you for creating a bug report. Before you fill this out, please read the following:
-        1. Ensure You are running the latest version of AdvancedChat. If you aren't, we will just tell you to update.
-        2. Ensure the issue has not already been reported. If it already has been, please comment more info on the previous issue instead of creating a new one.
-        3. Only put ONE bug per issue. This helps us keep track of things.
+        1. Ensure you are running the latest version of AdvancedChat. If you aren't, we will just tell you to update.
+        2. Ensure the issue has not already been reported. If it has, please comment more info on the previous issue instead of creating a new one.
+        3. Only put **one** bug per issue. This helps us keep track of things.
+        **NOTE: DO NOT POST DISCORD LINKS WITH IMAGES, VIDEOS. THEY EXPIRE WITHIN HOURS OF BEING LINKED.**
   - type: textarea
     id: bug-description
     attributes:
@@ -38,7 +39,21 @@ body:
     id: server-log
     attributes:
       label: Server Log
-      description: 'You servers "logs/latest.log" file uploaded to https://mcpaste.io/'
+      description: 'Your server''s "logs/latest.log" file uploaded to https://mcpaste.io/'
       placeholder: ex. https://mcpaste.io/00000a0aa0a000aa
     validations:
       required: false
+  - type: input
+    id: confirmation
+    attributes:
+      label: Filled out form correct and using latest version
+      description: |
+        Please type **I confirm** to acknowledge the following:
+        - You have not posted any direct Discord links or hastebin.com links, as they expire within hours of being posted.
+        - You are using latest version of the plugin.
+        - You have filled out the bug report correctly. If not, the issue will be closed without questions.
+      placeholder: 'Type "I confirm" here'
+    validations:
+      required: true
+      pattern: '^I confirm$'
+
